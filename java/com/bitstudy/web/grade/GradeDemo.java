@@ -2,8 +2,6 @@ package com.bitstudy.web.grade;
 
 import java.util.Scanner;
 
-import static com.bitstudy.web.grade.GradeApp.;
-
 /**
  * packageName: com.bitstudy.web.grade
  * fileName        : GradeDemo
@@ -35,18 +33,20 @@ import static com.bitstudy.web.grade.GradeApp.;
  * 2022-01-26         chohyungook        최초 생성
  */
 public class GradeDemo {
+
     public static void main(String[] args){
         Scanner scanner =new Scanner(System.in);
         GradeApp gradeApp = new GradeApp();
-        System.out.println("이름을 입력하세요.");
-        String name = scanner.next();
-        System.out.println("국어 점수를 입력하세요.");
-        int kor = scanner.nextInt();
-        System.out.println("영어 점수를 입력하세요.");
-        int eng = scanner.nextInt();
-        System.out.println("수학 점수를 입력하세요.");
-        int math = scanner.nextInt();
-        String res = gradeApp.grade(name,kor,eng,math);
-        System.out.println(res);
+
+        for (int i=2;i<3; i++){
+            System.out.println(i+"번학생 국어 영어 수학 점수를 순서대로 입력하세요.");
+            String name = scanner.next();
+            int kor = scanner.nextInt();
+            int eng = scanner.nextInt();
+            int math = scanner.nextInt();
+            String res = gradeApp.grade(name,kor,eng,math);
+            System.out.println(res);
+        }
+
     }
 }
