@@ -1,12 +1,33 @@
 package com.bitparctice.web.controller;
 
-import com.bitparctice.web.domain.*;
-import com.bitparctice.web.service.*;
+import com.bitparctice.web.domain.BmiDTO;
+import com.bitparctice.web.service.BmiService;
+import com.bitparctice.web.domain.CalcDTO;
+import com.bitparctice.web.service.CalcService;
+import com.bitparctice.web.domain.GradeDTO;
+import com.bitparctice.web.service.GradeService;
+import com.bitparctice.web.domain.LoginDTO;
+import com.bitparctice.web.service.LoginService;
+import com.bitparctice.web.domain.SearchDTO;
+import com.bitparctice.web.service.SearchService;
+import com.bitparctice.web.domain.WeeklySalaryDTO;
+import com.bitparctice.web.domain.CircleAreaCalcDTO;
+import com.bitparctice.web.domain.WeeklySalaryDTO;
+import com.bitparctice.web.domain.ChangeDTO;
+import com.bitparctice.web.service.ChangeService;
+import com.bitparctice.web.service.WeeklySalaryService;
+import com.bitparctice.web.service.CircleAreaCalcService;
+
+
+
+
+
+
 
 import java.util.Scanner;
 
 /**
- * packageName: com.bitparctice.web.controller
+ * packageName: com.bitparctice.web.controllerS
  * fileName        : DemoController
  * author           : chohyungook
  * date               : 2022-01-27
@@ -26,6 +47,7 @@ public class DemoController {
         GradeDTO grade=new GradeDTO();
         LoginDTO login=new LoginDTO();
         SearchDTO search=new SearchDTO();
+        ChangeDTO change=new ChangeDTO();
         BmiService bmiService=new BmiService();
         CalcService calcService=new CalcService();
         WeeklySalaryService weeklySalaryService=new WeeklySalaryService();
@@ -33,19 +55,18 @@ public class DemoController {
         GradeService gradeService=new GradeService();
         LoginService loginService=new LoginService();
         SearchService searchService=new SearchService();
+        ChangeService changeService=new ChangeService();
 
 
 
 
 
         while (true) {
-            System.out.println("메뉴 선택");
-            String menu = "0. EXIT 1.BMICALC 2.CALC 3.WEEKLY_SALARY CALC 4.CIRCLE_AREA_CALC 5.GRADE 6.LOGIN 7.SEARCH";
-            System.out.println(menu);
-            String select = scanner.next();
-            String res = "";
+            System.out.println("메뉴 선택\n0. EXIT 1.BMICALC 2.CALC 3.WEEKLY_SALARY CALC 4.CIRCLE_AREA_CALC 5.GRADE " +
+                    "6.LOGIN 7.SEARCH  8. CHANGE");
+            String res="";
 
-            switch (select) {
+            switch (scanner.next()) {
                 case "0":
                     System.out.println("Exit");return;
                 case "1":
@@ -94,6 +115,10 @@ public class DemoController {
                     System.out.println(search.MAIN_NAME+"\n Google 검색 또는 URL 입력");
                     res=searchService.getSearch(search);
                     break;
+                case "8":
+                    System.out.println(change.MAIN_NAME+"\n 투입하실 지폐단위 금액을 적어주세요.");
+                    System.out.println(scanner.nextInt());
+                    res=changeService.getChange(change);
                 default:res="정확한 메뉴번호를 입력해주세요.";break;
 
             }

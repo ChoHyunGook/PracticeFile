@@ -47,7 +47,7 @@ public class CalcService {
                     res = calc.getNum1() * calc.getNum2();
                     break;
                 case "/":
-                    res = calc.getNum1() / calc.getNum2();calc.getNum1();
+                    res = calc.getNum1() / calc.getNum2();
                     break;
                 case "%":
                     res =calc.getNum1()  % calc.getNum2();

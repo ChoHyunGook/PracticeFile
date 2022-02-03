@@ -15,8 +15,8 @@ import com.bitparctice.web.domain.WeeklySalaryDTO;
  */
 public class WeeklySalaryService {
     public String getWeekSalary(WeeklySalaryDTO salary){
-        int res =0;
-        int res1 =0;
+        int res;
+        int res1;
 
 
         res = salary.getWork_hour()* salary.getTime_salary();
