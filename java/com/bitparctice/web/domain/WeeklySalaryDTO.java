@@ -13,10 +13,10 @@ package com.bitparctice.web.domain;
  */
 public class WeeklySalaryDTO {
     public static String MAIN_NAME="WEEKLY SALARY CALC";
-    public String name;
-    public int work_hour;
-    public int work_day;
-    public int time_salary;
+    private String name;
+    private int work_hour;
+    private int work_day;
+    private int time_salary;
 
     public String getName(){
         return name;

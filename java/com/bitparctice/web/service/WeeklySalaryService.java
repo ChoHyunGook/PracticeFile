@@ -14,15 +14,13 @@ import com.bitparctice.web.domain.WeeklySalaryDTO;
  * 2022-01-30         chohyungook        최초 생성
  */
 public class WeeklySalaryService {
-    public String getWeekSalary(WeeklySalaryDTO salary){
-        int res;
-        int res1;
+    public String getWeekSalary(WeeklySalaryDTO weeklySalary){
 
+        int res=weeklySalary.getWork_hour()*weeklySalary.getTime_salary();
+        int res1=res*weeklySalary.getWork_day();
 
-        res = salary.getWork_hour()* salary.getTime_salary();
-        res1=res* salary.getWork_day();
 
         return String.format("%s 님의 일급은 %d 이며 주급은 %d 입니다."
-                ,salary.name,res,res1);
+                ,weeklySalary.getName(),res,res1);
     }
 }

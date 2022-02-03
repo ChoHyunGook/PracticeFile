@@ -15,9 +15,9 @@ public class CalcDTO {
 
 
    public static String MAIN_NAME="HELLO CALC WORLD~!";
-    int num1=0;
-    int num2=0;
-    String op="";
+   private int num1=0;
+   private int num2=0;
+   private String op="";
 
 
     public int getNum1(){
@@ -35,7 +35,7 @@ public class CalcDTO {
     public String getOp(){
         return op;
     }
-    public void setOp(){
+    public void setOp(String op){
         this.op=op;
     }
 

@@ -35,7 +35,7 @@ public class LoginDTO {
     public String getName(){
         return name;
     }
-    public void setName(){
+    public void setName(String next){
         this.name=name;
     }
     public String getIDEA(){
