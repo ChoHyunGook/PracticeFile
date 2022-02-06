@@ -90,6 +90,7 @@ public class DemoController {
                     weeklySalary.setWork_day(scanner.nextInt());
                     weeklySalary.setTime_salary(scanner.nextInt());
                     res=weeklySalaryService.getWeekSalary(weeklySalary);
+                    break;
                 case "4":
                     System.out.println(circleArea.MAIN_NAME+"\n 반지름 원주율 입력");
                     circleArea.setHalf(scanner.nextInt());
@@ -119,6 +120,7 @@ public class DemoController {
                     System.out.println(change.MAIN_NAME+"\n 투입하실 지폐단위 금액을 적어주세요.");
                     change.setInput(scanner.nextInt());
                     res=changeService.getChange(change);
+                    break;
                 default:res="정확한 메뉴번호를 입력해주세요.";break;
 
             }
